@@ -54,26 +54,37 @@ namespace ConsoleApp6
             countriesList.Add(new Countries() { Name = "Slovenia", Population = 1.22 });
             countriesList.Add(new Countries() { Name = "Spain", Population = 10.49 });
             countriesList.Add(new Countries() { Name = "Sweden", Population = 2.29 });
+            
+            double totalYes = 0;
+            double totalNo = 0;
+            double totalAbs = 0;
 
             foreach (var country in countriesList)
 
             {
-                double totalYes = 0;
-                double totalNo = 0;
-                double totalAbs = 0;
+               
                 Console.WriteLine("Vote for {0}, please enter y for yes, n for no, or a for abstain", country.Name);
                 string input = Console.ReadLine();
                 if (input == "y")
                 {
                     totalYes += country.Population;
+                    Console.WriteLine(totalYes);
+                    Console.WriteLine(totalNo);
+                    Console.WriteLine(totalAbs);
                 }
                 else if (input == "n")
                 {
                     totalNo += country.Population;
+                    Console.WriteLine(totalYes);
+                    Console.WriteLine(totalNo);
+                    Console.WriteLine(totalAbs);
                 }
                 else if (input == "a")
                 {
                     totalAbs += country.Population;
+                    Console.WriteLine(totalYes);
+                    Console.WriteLine(totalNo);
+                    Console.WriteLine(totalAbs);
                 }
                 else
                 {
