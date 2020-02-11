@@ -1,4 +1,4 @@
-﻿namespace Voting
+﻿namespace Country
 {
     internal class Countries
     {
