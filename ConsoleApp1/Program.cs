@@ -54,28 +54,25 @@ namespace Calculator
                 if (input == "y")
                 {
                     totalYes += country.Population;
-                    Console.WriteLine(totalYes);
-                    Console.WriteLine(totalNo);
-                    Console.WriteLine(totalAbs);
+                    
                 }
                 else if (input == "n")
                 {
                     totalNo += country.Population;
-                    Console.WriteLine(totalYes);
-                    Console.WriteLine(totalNo);
-                    Console.WriteLine(totalAbs);
+                    
                 }
                 else if (input == "a")
                 {
                     totalAbs += country.Population;
-                    Console.WriteLine(totalYes);
-                    Console.WriteLine(totalNo);
-                    Console.WriteLine(totalAbs);
+                    
                 }
                 else
                 {
                     throw new Exception("y, n, or a only");
                 }
+                Console.WriteLine($"The percentage yes vote is now {totalYes}");
+                Console.WriteLine($"The percentage no vote is now {totalNo}");
+                Console.WriteLine($"The percentage abstaining is now {totalAbs}");
             }
             
         }
