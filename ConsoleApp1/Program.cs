@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Country;
 using Voting;
 
 namespace Calculator
@@ -12,6 +13,10 @@ namespace Calculator
 
         static void Main(string[] args)
         {
+            VotingRule vr = new VotingRule();
+            vr.Votechoose();
+            Console.WriteLine($"You have chosen{vr.VoteRule}");
+            //Add EU countries as object through Countries class
             List<Countries> countriesList = new List<Countries>();
 
             countriesList.Add(new Countries() { Name = "Austria", Population = 1.98 });
