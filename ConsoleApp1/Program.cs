@@ -5,24 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Voting;
 
-namespace ConsoleApp6
+namespace Calculator
 {
-    public class EUCountry
-    {
-        public EUCountry()
-        {
-            Name = null;
-        }
-        public EUCountry(string name, double population)
-        {
-            Name = Name;
-            Population = Population;
-          
-        }
-        public string Name { get; set; }
-        public double Population { get; set; }
-
-
+    public class Program
+    {       
 
         static void Main(string[] args)
         {

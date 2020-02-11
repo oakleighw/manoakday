@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\computing\\source\\repos\\dayna\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\Users\\oakle\\OneDrive\\Desktop\\voting calculator\\Voting Calculator\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\computing\\source\\repos\\dayna\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\Users\\oakle\\OneDrive\\Desktop\\voting calculator\\Voting Calculator\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\computing\\source\\repos\\dayna\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\Users\\oakle\\OneDrive\\Desktop\\voting calculator\\Voting Calculator\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\Users\\computing\\source\\repos\\dayna\\ConsoleApp1\\ConsoleApp1.csproj",
-        "packagesPath": "C:\\Users\\computing\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\computing\\source\\repos\\dayna\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\oakle\\OneDrive\\Desktop\\voting calculator\\Voting Calculator\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\oakle\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oakle\\OneDrive\\Desktop\\voting calculator\\Voting Calculator\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\computing\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\oakle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -55,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
