@@ -15,7 +15,7 @@ namespace Calculator
         {
             VotingRule vr = new VotingRule();
             vr.Votechoose();
-            Console.WriteLine($"You have chosen{vr.VoteRule}");
+            
             //Add EU countries as object through Countries class
             List<Countries> countriesList = new List<Countries>();
 
@@ -27,6 +27,7 @@ namespace Calculator
             countriesList.Add(new Countries() { Name = "Czech Republic", Population = 2.35 });
             countriesList.Add(new Countries() { Name = "Denmark", Population = 1.30 });
             countriesList.Add(new Countries() { Name = "Estonia", Population = 0.30 });
+            countriesList.Add(new Countries() { Name = "Finland", Population = 1.23 });
             countriesList.Add(new Countries() { Name = "France", Population = 14.98 });
             countriesList.Add(new Countries() { Name = "Germany", Population = 18.54 });
             countriesList.Add(new Countries() { Name = "Greece", Population = 2.40 });
@@ -46,9 +47,16 @@ namespace Calculator
             countriesList.Add(new Countries() { Name = "Spain", Population = 10.49 });
             countriesList.Add(new Countries() { Name = "Sweden", Population = 2.29 });
             
+            //% vote
             double totalYes = 0;
             double totalNo = 0;
             double totalAbs = 0;
+            //number votes
+            int numberYes = 0;
+            int numberNo = 0;
+            int numberAbstain = 0;
+            
+
 
             foreach (var country in countriesList)
 
@@ -59,26 +67,36 @@ namespace Calculator
                 if (input == "y")
                 {
                     totalYes += country.Population;
+                    numberYes++;
                     
                 }
                 else if (input == "n")
                 {
                     totalNo += country.Population;
+                    numberNo++;
                     
                 }
                 else if (input == "a")
                 {
                     totalAbs += country.Population;
+                    numberAbstain++;
                     
                 }
                 else
                 {
                     throw new Exception("y, n, or a only");
                 }
-                Console.WriteLine($"The percentage yes vote is now {totalYes}");
-                Console.WriteLine($"The percentage no vote is now {totalNo}");
-                Console.WriteLine($"The percentage abstaining is now {totalAbs}");
+                Console.WriteLine($"The percentage yes vote is now {totalYes}%");
+                Console.WriteLine($"The percentage no vote is now {totalNo}%");
+                Console.WriteLine($"The percentage abstaining is now {totalAbs}%");
             }
+            if (vr.Result(totalYes,numberYes)== true){
+                Console.WriteLine("<<The motion is Approved>>");
+            } else{
+                Console.WriteLine("<<The motion is Rejected">>);
+            }
+            //ask if the user wants final stats
+            vr.Stats(totalYes, totalNo, totalAbs, numberYes,numberNo,numberAbstain);
             
         }
     }
