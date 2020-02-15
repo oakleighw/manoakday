@@ -93,7 +93,7 @@ namespace Calculator
             if (vr.Result(totalYes,numberYes)== true){
                 Console.WriteLine("<<The motion is Approved>>");
             } else{
-                Console.WriteLine("<<The motion is Rejected">>);
+                Console.WriteLine("<<The motion is Rejected>>");
             }
             //ask if the user wants final stats
             vr.Stats(totalYes, totalNo, totalAbs, numberYes,numberNo,numberAbstain);
