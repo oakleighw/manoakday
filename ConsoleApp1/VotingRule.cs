@@ -39,7 +39,7 @@ namespace Voting
 		{
 			Console.WriteLine("Please choose a Voting Rule by number: \n 1.Qualified Majority \n 2. Reingforced Qualified Majority \n 3. Simple Majority \n 4.Unanimous");
 			string answer = Console.ReadLine();
-			this.VoteRule = answer;
+			VoteRule = answer;
 		}
 		
 	}
