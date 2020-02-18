@@ -34,7 +34,7 @@ namespace Voting
 					throw new Exception("InvalidInput");
 				}
 			}
-		}
+		}//Allow the user to pick which rule they would like to apply for their vote
 		public void Votechoose()
 		{
 			Console.WriteLine("Please choose a Voting Rule by number: \n 1.Qualified Majority \n 2.Reinforced Qualified Majority \n 3.Simple Majority \n 4.Unanimous");
@@ -43,7 +43,8 @@ namespace Voting
 			Console.WriteLine($"You have chosen {VoteRule}");
 		}
 		public bool Result(double percentage, int countryYes)
-		{//QM
+		{//Qualified majority rule, at least 65% of the population and 15 countries have to 
+		//vote in favour fot the to pass
 			if (_voteRule == "Qualified Majority")
 			{
 				if (percentage >= 65.00 && countryYes >= 15)
@@ -54,7 +55,8 @@ namespace Voting
 				{
 					return false;
 				}
-			}
+			}//Reinforced qualified majority rule, at least 65% of the population and 20 countries have to vote in favour 
+			//for the vote to pass
 			else if (_voteRule == "Reinforced Qualified Majority")
 			{
 				if (percentage >= 65 && countryYes >= 20)
@@ -65,7 +67,7 @@ namespace Voting
 				{
 					return false;
 				}
-			}
+			}//Simple majority rule, 14 participating countries have to vote in favour for the vote to pass
 			else if (_voteRule == "Simple Majority")
 			{
 				if (countryYes >= 14)
@@ -77,7 +79,7 @@ namespace Voting
 					return false;
 				}
 			}
-			//unanimous
+			//Unanimity rule, all participating countries have to vote in favour for the vote to pass
 			else
 			{
 				if (countryYes == 27)
