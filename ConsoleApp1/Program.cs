@@ -55,7 +55,15 @@ namespace Calculator
                 }
                 else
                 {
-                    throw new Exception("y, n, or a only");
+                   try
+                   {
+                   }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Invalid input, please input y, n, or a to vote");
+                    }
+                   
+                  
 
                 }
                 Console.WriteLine($"The percentage yes vote is now {totalYes}%");
