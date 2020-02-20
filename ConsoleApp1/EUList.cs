@@ -9,7 +9,7 @@ namespace List
     {
         
             
-        public List<Countries> EUListMaker()
+        public List<Countries> EUListMaker()//method to make the EU List which the questioner will run through in Main()
         {
             List<Countries> countriesList = new List<Countries>();
             countriesList.Add(new Countries() { Name = "Austria", Population = 1.98 });

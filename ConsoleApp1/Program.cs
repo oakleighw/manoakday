@@ -32,44 +32,55 @@ namespace Calculator
             foreach (var country in elist.EUListMaker())
 
             {
-               
-                Console.WriteLine("Vote for {0}, please enter y for yes, n for no, or a for abstain", country.Name);
+               while(true)//covers for accidental incorrect inputs
+               { 
+                Console.WriteLine("Vote for {0}, please enter y for yes, n for no, or a for abstain.[Enter 'q' to exit]", country.Name);
                 string input = Console.ReadLine();
-                if (input == "y")
-                {
-                    totalYes += country.Population;
-                    numberYes++;
-                    
-                }
-                else if (input == "n")
-                {
-                    totalNo += country.Population;
-                    numberNo++;
-                    
-                }
-                else if (input == "a")
-                {
-                    totalAbs += country.Population;
-                    numberAbstain++;
-                    
-                }
-                else
-                {
-                   try
-                   {
-                   }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Invalid input, please input y, n, or a to vote");
+                    if (input == "y")
+                    {//VoteYes
+                        totalYes += country.Population;
+                        numberYes++;
+                        break;
+
                     }
-                   
+                    else if (input == "n")
+                    {//voteNo
+                        totalNo += country.Population;
+                        numberNo++;
+                        break;
+
+                    }
+                    else if (input == "a")
+                    {//VoteAbstain
+                        totalAbs += country.Population;
+                        numberAbstain++;
+                        break;
+
+                    }
+                    else if (input == "q")
+                    {//quit program
+                        Console.WriteLine("Goodbye");
+                        Console.ReadLine();
+                        System.Environment.Exit(0);
+                    }
+                    else
+                    {//invalid input, asks again
+                        try
+                        {
+                            throw new Exception("invalid input");
+                        }
+                        catch (Exception)
+                        {
+                            Console.WriteLine("Invalid input, please enter a valid option");
+                        }
+                    }  
                   
 
-                }
+               }//gives updated stats after each vote
                 Console.WriteLine($"The percentage yes vote is now {totalYes}%");
                 Console.WriteLine($"The percentage no vote is now {totalNo}%");
                 Console.WriteLine($"The percentage abstaining is now {totalAbs}%");
-            }
+            }//final result
             if (vr.Result(totalYes,numberYes)== true){
                 Console.WriteLine("<<The motion is Approved>>");
             } else{
