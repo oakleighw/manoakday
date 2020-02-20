@@ -64,7 +64,7 @@ namespace Voting
 			VoteRule = answer;
 			Console.WriteLine($"You have chosen {VoteRule}");
 		}
-		public bool Result(double percentage, int countryYes)
+		public bool Result(double percentage, int countryYes)//returns result to be used at end of main
 		{//Qualified majority rule, at least 65% of the population and 15 countries have to 
 		//vote in favour for the rule to pass
 			if (_voteRule == "Qualified Majority")
