@@ -7,6 +7,7 @@ using Country;
 using Voting;
 using List;
 
+
 namespace Calculator
 {
     public class Program
@@ -76,8 +77,8 @@ namespace Calculator
                     }  
                   
 
-               }//gives updated stats after each vote
-                Console.WriteLine($"The percentage yes vote is now {totalYes}%");
+               }//gives updated stats after each vote [Math.Floor to count for % over 100]
+                Console.WriteLine($"The percentage yes vote is now {Math.Floor(totalYes)}%");
                 Console.WriteLine($"The percentage no vote is now {totalNo}%");
                 Console.WriteLine($"The percentage abstaining is now {totalAbs}%");
             }//final result

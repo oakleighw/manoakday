@@ -119,7 +119,7 @@ namespace Voting
 			Console.WriteLine("Would you like to see the final statistics? (y/n)");
 			string input = Console.ReadLine();
 			if (input == "y"){
-				Console.WriteLine($"The total number of yes voting countries = {noYes}, or ~{perYes}% of EU Population");
+				Console.WriteLine($"The total number of yes voting countries = {noYes}, or ~{Math.Floor(perYes)}% of EU Population");
 				Console.WriteLine($"The total number of no voting countries = {noNo}, or ~{perNo}% of EU Population");
 				Console.WriteLine($"The total number of countries abstaining from the vote = {noAb}, or ~{perAb}% of EU Population");
 			} else{
