@@ -13,7 +13,7 @@ namespace Calculator
     {       
 
         static void Main(string[] args)
-        {
+        {//creating voting rule and EU list objects to use in Main
             VotingRule vr = new VotingRule();
             vr.Votechoose();
             EUList elist = new EUList();
@@ -28,7 +28,7 @@ namespace Calculator
             int numberAbstain = 0;
             
 
-
+            //loop through countries in list to vote for each one
             foreach (var country in elist.EUListMaker())
 
             {
